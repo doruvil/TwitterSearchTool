@@ -1,0 +1,40 @@
+<!--  Copyright (c) 2013, Dumitru Vilceanu
+  All rights reserved.-->
+<!DOCTYPE html>
+<html>
+	<head>
+        
+		<meta charset="UTF-8" />
+		<style type="text/css">body{font-family:"Avenir", serif;} a:link{color:gray;}</style>
+	</head>
+	<body>
+        <input type="button" onclick="dismissViewController();" value="Back" />
+            <center>
+        <h1>Tweet description</h1>
+            </center>
+        <br /><br />
+        <h3> User: '%twitterUsername%'</h3>
+        <h3> Tweet:'%twitterTweet%'</h3>
+        
+        <h3> Word count:'%wordCount%'</h3>
+        
+        <h3> Date:'%twitterTweetDate%'</h3>
+        
+        <script type="text/javascript" charset="utf-8">
+			function dismissViewController() {
+                location.href = 'dismiss://current web view controller';
+			}
+            </script>
+        <script type="text/javascript" charset="utf-8">
+			function countWords(s) {
+                s = s.replace(/(^\s*)|(\s*$)/gi,"");
+                s = s.replace(/[ ]{2,}/gi," ");
+                s = s.replace(/\n /,"\n");
+                return s.split(' ').length;
+            }
+            </script>
+
+        <br /><br />   <!-- Empty space-->	
+	</body>
+</html>
+

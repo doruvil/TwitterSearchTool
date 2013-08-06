@@ -1,0 +1,78 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red67\green67\blue67;\red246\green246\blue246;\red74\green0\blue230;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10860\viewh16480\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf0 Important notes:
+\b0 \
+This project has been developed by Vilceanu Dumitru (doruvil@yahoo.com)\
+	The tools starts with a main View Controller which has a search textfield, a search button, a table, but also a textfield in order to set new value for the search count results (the number of the results which are asked in the URL request).\
+	In order to work, you need to get your 
+\f1\fs26 \cf2 \cb3 Consumer key and Consumer secret from
+\f0\fs24 \cf0 \cb1  {\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/apps/new"}}{\fldrslt https://dev.twitter.com/apps/new}}. These two values should be in the application info.plist file. as KEY: TWITTER_CONSUMER_KEY = "your_consumer_key" and TWITTER_CONSUMER_SECRET = "your_consumer_secret".\
+	Another additional, required setting is to add a Twitter account to your Settings.app (the main Settings application of the iPad).\
+\
+Workflow: \
+	The text you want to search needs to be UITextField, and then press SEARCH. An activity indicator will be shown on the screen, and user interface will be temporarily disabled. After getting the result from calling the URL, the data will be parsed and shown in the table. \
+	Also, the number of the tweets got from the call can be changed using the textfield on the right, where you can set another value besides 20 (this is a default value). This count value will also be the number of the entries in the table.\
+	After getting the search results in the table you can press one cell and a UIWebView will be shown with the Tweet details: username of the user who posted that tweet, the text of the tweet, the number of words in tweet (using javascript injection) and also the date (according the the GMT time).\
+	Also a back button will be shown in the UIWebView in order to get back to the View Controller which contains the table and the search textfield.\
+\
+\
+
+\b References: 
+\b0 \
+{\field{\*\fldinst{HYPERLINK "https://twitter.com/search-home"}}{\fldrslt https://twitter.com/search-home}}\
+Using this link each tweet can be searched anonymously.\
+\
+{\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/"}}{\fldrslt https://dev.twitter.com/}}\
+Main link for twitter dev.\
+\
+{\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/docs/api/1.1"}}{\fldrslt https://dev.twitter.com/docs/api/1.1}}\
+API 1.1 documentation link.\
+\
+{\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/docs/auth/oauth/faq"}}{\fldrslt https://dev.twitter.com/docs/auth/oauth/faq}}\
+Documentation about Authentication.\
+\
+{\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/docs/ios"}}{\fldrslt https://dev.twitter.com/docs/ios}}\
+Link where details about integrating API Twitter into iOS can be found\
+\
+\cf4 \ul \ulc4 https://dev.twitter.com/discussions\cf0 \ulnone \
+Link where discussion about latest API can be found.\
+\
+{\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/docs/ios/making-api-requests-slrequest"}}{\fldrslt https://dev.twitter.com/docs/ios/making-api-requests-slrequest}}\
+SLRequest main reference link\
+\
+Other References:\
+\
+\
+{\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/1965218/twitter-oauth-with-mgtwitterengine"}}{\fldrslt http://stackoverflow.com/questions/1965218/twitter-oauth-with-mgtwitterengine}}\
+{\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/14334047/how-to-call-javascript-function-in-objective-c"}}{\fldrslt http://stackoverflow.com/questions/14334047/how-to-call-javascript-function-in-objective-c}}\
+{\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/6315317/how-to-reload-already-loaded-uiwebview-with-new-html-string"}}{\fldrslt http://stackoverflow.com/questions/6315317/how-to-reload-already-loaded-uiwebview-with-new-html-string}}\
+\
+
+\b Projects as template from github:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://github.com/seancook/TWReverseAuthExample"}}{\fldrslt \cf0 https://github.com/seancook/TWReverseAuthExample}}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://github.com/atebits/OAuthCore"}}{\fldrslt \cf0 https://github.com/atebits/OAuthCore}}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://github.com/stevenpsmith/ObjectiveCToJavascript"}}{\fldrslt \cf0 https://github.com/stevenpsmith/ObjectiveCToJavascript}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/kharrison/CodeExamples/tree/master/TwitterSearch"}}{\fldrslt https://github.com/kharrison/CodeExamples/tree/master/TwitterSearch}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/bengottlieb/Twitter-OAuth-iPhone"}}{\fldrslt https://github.com/bengottlieb/Twitter-OAuth-iPhone}}\
+\
+{\field{\*\fldinst{HYPERLINK "https://github.com/meinside/iphonelib/wiki"}}{\fldrslt 
+\b0 https://github.com/meinside/iphonelib/wiki}}
+\b0 \
+{\field{\*\fldinst{HYPERLINK "https://github.com/meinside/iphonelib/wiki/OAuthProvider"}}{\fldrslt https://github.com/meinside/iphonelib/wiki/OAuthProvider}}\
+{\field{\*\fldinst{HYPERLINK "http://zwekyethu.appspot.com/github.com/jaanus/PlainOAuth/commit/7e247fcfd81b5196301c22a1edb632a11979efb7"}}{\fldrslt http://zwekyethu.appspot.com/github.com/jaanus/PlainOAuth/commit/7e247fcfd81b5196301c22a1edb632a11979efb7}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/whomwah/tellybox/blob/master/TellyBox/MGTwitterEngine.m"}}{\fldrslt https://github.com/whomwah/tellybox/blob/master/TellyBox/MGTwitterEngine.m}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/kimptoc/MGTwitterEngine-1.0.8-OAuth/"}}{\fldrslt https://github.com/kimptoc/MGTwitterEngine-1.0.8-OAuth/}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/bengottlieb/Twitter-OAuth-iPhone/blob/master/Twitter%2BOAuth/MGTwitterEngine/MGTwitterEngine.h"}}{\fldrslt https://github.com/bengottlieb/Twitter-OAuth-iPhone/blob/master/Twitter%2BOAuth/MGTwitterEngine/MGTwitterEngine.h}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/mattgemmell/MGTwitterEngine/wiki/Building-and-testing-MGTwitterEngine"}}{\fldrslt https://github.com/mattgemmell/MGTwitterEngine/wiki/Building-and-testing-MGTwitterEngine}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/mattgemmell/MGTwitterEngine/blob/master/MGTwitterEngineGlobalHeader.h"}}{\fldrslt https://github.com/mattgemmell/MGTwitterEngine/blob/master/MGTwitterEngineGlobalHeader.h}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/mattgemmell/MGTwitterEngine"}}{\fldrslt https://github.com/mattgemmell/MGTwitterEngine}}\
+}
