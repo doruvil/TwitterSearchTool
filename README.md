@@ -1,4 +1,4 @@
-TwitterSearchTool
+Twitter Search Tool iOS
 =================
 
 This is a part of a functional iPhone app where the user can search for tweets on Twitter and see any particular tweet in a UIWebView while injecting it’s word count after the tweet.
@@ -21,6 +21,7 @@ Provided material
 
 • .js file with the Javascript functions to be injected in the page
 • function to get the tweet text;
+
 • function to count the number of words in a piece of text;
 • function to inject some text between the tweet and its timestamp.
 • URL for any giving tweet
